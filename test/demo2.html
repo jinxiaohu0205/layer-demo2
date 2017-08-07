@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  	<script src="../build/layer.js"></script>
+</head>
+<style>
+	.one{
+		width: 200px;
+		height: 200px;
+		background:red;
+	}
+	.layui-layer-loading .layui-layer-content {
+    width: 60px;
+    height: 40px;
+    /*text-align: center;*/
+    margin:0 auto;
+    /*background: url(loading-0.gif) no-repeat;*/
+}
+</style>
+<body>
+	<!--<div id="one">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>-->
+	<!--<div>two</div>-->
+	<div class="one">three</div>
+</body>
+<script>
+//layer.msg('hello'); 
+
+//layer.open({
+//type: 1, 
+//content: '传入任意的文本或html' //这里content是一个普通的String
+//});   
+
+
+//$("#one").click(function(){
+//	alert(1);
+//	layer.open({
+//	type: 1,
+//	content: $('#one') //这里content是一个DOM，注意：最好该元素要存放在body最外层，否则可能被其它的相对元素所影响
+//	});
+//})
+
+//layer.open({
+//type: 2, 
+//content: '2.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+//}); 
+
+//
+//$("div").css({
+//	background:"red",
+//	width:200,
+//	height:200
+//});
+//
+//$("div").click(function(){
+//	alert(1);
+//})
+
+//console.log($("#one div"));
+
+
+//加载时候的例子
+//layer.load(2);
+//setTimeout(function(){
+//layer.closeAll('loading');
+//}, 2000);
+
+
+//iframe页面多媒体
+$(".one").click(function(){
+	layer.open({
+	  type: 2,
+	  title: false,
+	  area: ['100%', '100%'],
+	  shade: 0.8,
+	  closeBtn: 0,
+	  shadeClose: true,
+	content: '//player.youku.com/embed/XMjY3MzgzODg0'
+//	 content: 'http://lol.qq.com/'
+	
+	});
+//	提示信息
+	layer.msg('点击任意处关闭');
+})
+
+
+//弹出即全屏
+//$(".one").click(function(){
+//	var index = layer.open({
+//	  type: 2,
+////	  content: 'http://layim.layui.com',
+//	  content:'2.html',
+//	  area: ['320px', '195px'],
+//	  maxmin: true
+//	});
+//	layer.full(index);
+//})
+
+
+</script>
+</html>
